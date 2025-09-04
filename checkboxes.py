@@ -13,9 +13,9 @@ checkboxes.click()
 
 time.sleep(.5)
 
-checkboxes = driver.find_elements("css selector", "input[type='checkbox']")
+checkboxes = driver.find_elements("css selector", "input[type='checkbox']") # Kõik checkboxid
 for checkbox in checkboxes:
-    if(not checkbox.is_selected()):
+    if(not checkbox.is_selected()): # Üks on juba selected, ärme unselecti seda
         checkbox.click()
     time.sleep(.5)
 time.sleep(1.5)
